@@ -3,90 +3,124 @@
     <head>
         <meta charset="UTF-8">
         <title>My First Webpage</title>
-        <style type="text/css">
+        <style>
             body{
-                background-color: rgb(73, 72, 72);
+                background-image: url('/images/t95\ wall\ paper.jpg');
+                background-position: 70%;
+                background-size:cover;
+                background-repeat: no-repeat;
+                background-color: rgb(59, 59, 59);
             }
-            p{
-                color:rgb(237, 237, 237);
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            
+            header{grid-area: header;}
+            #menu{grid-area: menu;}
+            article{grid-area: article;}
+            footer{grid-area: footer;}
+
+            .grid-container{
+                display: grid;
+                grid-template-areas: 
+                    'header header header header header header'
+                    'menu menu article article article article'
+                    'footer footer footer footer footer footer';  
             }
-            h1{
-                font-size: 40px;
-                color:rgb(237, 237, 237);
+
+            #menu{
+                text-align: center;
+                padding: 15px 0;
+                margin: 50px 15px 50px 25%;
+                border-radius: 10px;
+                border: 1px black solid;
                 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             }
 
+            #menu, article{
+                min-height: 300px;
+                min-width: 100px;
+                background-color:rgba(93, 96, 114, 0.98);
+            }
+
+            article{
+                text-align: center;
+                padding: 15px 0;
+                margin: 80px 15% 80px 10px;
+                border-radius: 10px;
+                border: 1px black solid;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            header{
+                color:rgb(246, 250, 255);
+                text-align: center;
+                background-color: rgb(60, 67, 104);
+                margin-left: 20%;
+                margin-right: 20%;
+                border-bottom: rgb(59, 59, 59) 12px solid;
+                font-size: 40px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                
+            }
+
+            footer{
+                text-align: center;
+                padding: 15px 0;
+                font-size: 20px;
+                background-color:rgb(59, 59, 59);
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                display:flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                color:rgb(225, 236, 241);
+            }
+
             a{
-                color:rgb(175, 214, 234);
+                background-color: rgb(41, 68, 82);
+                padding:8px;
+                border-radius: 10px;
+                border:rgb(142, 203, 233) 2px solid;
+                color:rgb(142, 203, 233);
                 text-decoration: none;
             }
             a:hover{
                 color:chartreuse;
+                background-color: rgb(77, 110, 126);
+                border:chartreuse 2px solid;
             }
 
-            .Title{
-                background-color: rgb(37, 37, 37);
-                width:100%;
-                height:50px;
-                text-align: center;
-                
+            .p1{
+                font-size: 30px;
+                font-weight: bold;
+                color:rgb(246, 250, 255);
             }
-            .Middle-content{
-                background-color: rgb(73, 72, 72);;
-                width:50%;
-                height:600px;
-
-                text-align: center;
+            .p2{
                 font-size: 20px;
-                float:left;
-            }
-            .Left-side{
-                background-color: rgb(73, 72, 72);;
-                width:25%;
-                height:600px;
-
-                text-align: center;
-                font-size: 20px;
-                float:left;
-            }
-            .Right-side{
-                background-color: rgb(73, 72, 72);;
-                width:18%;
-                height:600px;
-
-                text-align: center;
-                font-size: 20px;
-                float:right;
+                color:rgb(246, 250, 255);
+                text-align: left;
+                padding:20px;
             }
 
         </style>
     </head>
     <body>
-        <div class="Title">
-            <h1>Welcome To My Webpage</h1>
+        <div class="grid-container">
+            <header>
+                <p><i><b>Akseli Tanila</b></i></p>
+            </header>
+            <aside id="menu">
+                <p class="p1">More things:</p>
+                <p class="p2">C++-kielen standardi ISO/IEC 14882:1998 vahvistettiin vuonna 1998, C++11 (ent. C++0x) vuonna 2011 C++14, (ISO/IEC 14882:2014) vuonna 2014. Uusin standardi ISO/IEC 14882:2017 (C++17) on valmistunut vuonna 2017. </p>
+            </aside>
+            <article>
+                <p class="p1">Random textbox</p>
+                <p class="p2">C++ on ohjelmointikieli, jonka Bjarne Stroustrup kehitti 1980-luvulla. Kieli on kehitetty C-kielestä lisäämällä siihen muun muassa olio-ohjelmointiin ja geneerisyyteen liittyviä ominaisuuksia. </p>
+    
+            </article>
+            <footer>
+                <p><a href="https://worldoftanks.eu/">Link to WoT website </a></p>
+                <Form>
+                    <p>Useless button ➡️<input type="checkbox"> </p>
+                </Form>
+            </footer>
         </div>
-
-        <div class="Left-side">
-            <p></p>
-        </div>
-
-        <div class="Middle-content">
-            <p>This is my first webpage. Work in progress</p>
-            <p>This page will contain all kinds of things</p>
-            <img src="./images/t95 wall paper.jpg" alt="World of Tanks Wall paper by Wargaming" width="70%">
-            <p>
-                <a href="https://worldoftanks.eu/">Link to WoT website </a>
-            </p>
-            <Form>
-                <p>Useless button ➡️<input type="checkbox"></p>
-            </Form>
-        </div>
-
-        <div class="Right-side">
-            <p></p>
-
-        </div>
-
     </body>
 </html>
