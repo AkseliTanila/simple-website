@@ -1,0 +1,101 @@
+body{
+    background-color: rgb(161, 161, 161);
+}
+
+.header_own_config{
+    text-align: center;
+    margin:4em;
+}
+
+
+footer{
+    text-align: center;
+    background-color: rgba(82, 82, 82, 0.719);
+    margin-top: 7em;
+    font-size: 1.1em;
+    font-weight:600;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.collapse, .navbar-collapse{
+    background-color: rgb(241, 241, 241);
+}
+
+.navbar{
+    background-color: rgb(241, 241, 241);
+    border-bottom: 4px grey solid;
+}
+
+.navbar-brand{
+    margin-left: 1em;
+    margin-right: 2em;
+    font-size: 2em;
+    font-weight: bold;
+    color:black;
+}
+
+.nav-item{
+    margin-left: 10%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-right: 10%;
+}
+
+.box1, .box2{
+    text-align: center;
+    padding:2em;
+    border:1px rgba(0, 0, 0, 0.3) solid;
+    margin-top: 1.2em;
+}
+
+.box1{
+    background-color: azure;
+    border-radius: 1em;
+}
+.box2{
+    background-color: rgb(222, 252, 252);
+    border-radius: 1em;
+}
+
+.box3{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.box1 p, .box2 p{
+    text-align: left;
+}
+
+.form-check{
+    color:black;
+    
+}
+
+a{
+    background-color: rgb(165, 197, 202);
+    padding:8px;
+    border-radius: 10px;
+    border:rgb(165, 197, 202) 4px solid;
+    color:black;
+    text-decoration: none;
+    text-align: center;
+}
+a:hover, .nav-link:hover{
+    color:black;
+    border:rgb(65, 147, 240) 4px solid;
+}
+
+.nav-link{
+    color:black;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+article h1{
+    margin-bottom: 1em;
+}
+
+article p{
+    font-size: 1.1em;
+}
